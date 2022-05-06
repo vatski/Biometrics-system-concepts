@@ -1,0 +1,23 @@
+perpetrator_fp # gewoon de foto data
+images_db # the image data array [[[255,255...],[255,255...]]] and other stuff
+labels_db # the image name 001, 002, 003
+mss # simple root mean square formula
+sim_tb0 # similaritymatrix of all 100 compared to the murderer
+#constructSimilarityTable(perpetrator_fp,images_db, labels_db, mss)
+images_enhanced_db # enhanced images same like images_db
+masks_db # pixel is useful or not boolean
+images_segmented_db # images_enhanced_db*masks*db
+kp1 # keypoint array for first random image
+local_des1 # angle and amplitude with big array per keypoint
+kp2 # keypoint array for second random image
+local_des2 # angle and amplitude with big array per keypoint
+detector = cv2.ORB_create()
+local_k1_k2_matches # random image matches using hamming distances
+local_pt_target # random image nr for target kp
+local_pt_source # random image nr for source kp
+sim_tb1 # similarity matrix of enhanced perp vs enhanced images using local diff
+M # transformation matrix for affine transform
+inliers # minimal set of matching points
+kp1_reg # kp1 but transormed using M
+img1_reg # image warped using M
+
